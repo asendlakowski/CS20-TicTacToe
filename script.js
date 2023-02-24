@@ -24,7 +24,6 @@ function startPlayer() {
 }
 
 function makeBoard() {
-
     for (let i = 0; i < 9; i++) {
         const box = document.createElement("button");
         box.setAttribute("id", i);
@@ -52,10 +51,7 @@ function buttonPress(index) {
         return;
     }
     var buttons = document.getElementsByTagName("button");
-    console.log(buttons.length);
     grid[index] = x_or_o;
-    console.log(grid.join(" , "));
-    console.log("button " + buttons[index + 1].textContent);
     buttons[index + 1].innerHTML = x_or_o;
 
     win_check();
@@ -110,4 +106,3 @@ function win_check() {
         }
     }
 }
-
